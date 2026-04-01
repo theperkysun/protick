@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "secondary-fixed": "#c5ebd7",
+                        "primary": "#004d5b",
+                        "surface": "#f9f9f8",
+                        "primary-container": "#006778",
+                        "on-surface": "#1a1c1b",
+                        "inverse-surface": "#2f3130",
+                        "on-tertiary-fixed": "#360f00",
+                        "surface-variant": "#e2e3e1",
+                        "secondary": "#436555",
+                        "inverse-primary": "#86d2e5",
+                        "primary-fixed-dim": "#86d2e5",
+                        "background": "#f9f9f8",
+                        "tertiary": "#77310e",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-container": "#ffcdb9",
+                        "on-primary-container": "#97e3f6",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-background": "#1a1c1b",
+                        "primary-fixed": "#a9edff",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#3f484b",
+                        "tertiary-fixed": "#ffdbcd",
+                        "on-error": "#ffffff",
+                        "outline": "#6f797c",
+                        "on-primary-fixed-variant": "#004e5c",
+                        "surface-container-low": "#f3f4f2",
+                        "secondary-fixed-dim": "#a9cfbb",
+                        "on-secondary-fixed": "#002115",
+                        "outline-variant": "#bec8cb",
+                        "on-tertiary-fixed-variant": "#77320e",
+                        "surface-container-highest": "#e2e3e1",
+                        "on-error-container": "#93000a",
+                        "surface-container": "#edeeec",
+                        "secondary-container": "#c2e8d4",
+                        "surface-container-high": "#e8e8e7",
+                        "tertiary-fixed-dim": "#ffb597",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#f9f9f8",
+                        "surface-dim": "#d9dad9",
+                        "on-secondary-fixed-variant": "#2c4d3e",
+                        "surface-tint": "#026879",
+                        "on-secondary-container": "#476a5a",
+                        "on-primary-fixed": "#001f26",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#f0f1ef",
+                        "tertiary-container": "#954823"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Work Sans"],
+                        "label": ["Work Sans"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .circular-chart { display: block; margin: 10px auto; max-width: 80%; max-height: 250px; }
+        .circle-bg { fill: none; stroke: #edeeec; stroke-width: 2.8; }
+        .circle { fill: none; stroke-width: 2.8; stroke-linecap: round; }
+        .circle-primary { stroke: #004d5b; }
+        .circle-secondary { stroke: #436555; }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased flex min-h-screen">
+<!-- Shared SideNavBar -->
+<aside class="fixed left-0 top-0 h-full flex flex-col p-6 bg-[#f3f4f2] dark:bg-stone-900 w-64 z-50">
+<div class="mb-10 px-2">
+<h1 class="text-lg font-bold text-[#004d5b] dark:text-[#006778] tracking-tight">The Synchronized Dualism</h1>
+<p class="text-xs text-stone-500 font-medium">Curated Equilibrium</p>
+</div>
+<nav class="flex-1 space-y-2">
+<!-- Active Tab: Today -->
+<a class="flex items-center gap-3 px-4 py-3 text-[#004d5b] dark:text-[#006778] font-bold border-r-4 border-[#004d5b] transition-all duration-200" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="text-sm">Today</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-stone-500 dark:text-stone-400 font-medium hover:bg-stone-200/50 dark:hover:bg-stone-800/50 transition-colors" href="#">
+<span class="material-symbols-outlined">target</span>
+<span class="text-sm">Strategic Focus</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-stone-500 dark:text-stone-400 font-medium hover:bg-stone-200/50 dark:hover:bg-stone-800/50 transition-colors" href="#">
+<span class="material-symbols-outlined">self_care</span>
+<span class="text-sm">Restorative</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-stone-500 dark:text-stone-400 font-medium hover:bg-stone-200/50 dark:hover:bg-stone-800/50 transition-colors" href="#">
+<span class="material-symbols-outlined">folder_open</span>
+<span class="text-sm">Projects</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-stone-500 dark:text-stone-400 font-medium hover:bg-stone-200/50 dark:hover:bg-stone-800/50 transition-colors" href="#">
+<span class="material-symbols-outlined">history</span>
+<span class="text-sm">Archive</span>
+</a>
+</nav>
+<div class="mt-auto space-y-2">
+<button class="w-full mb-6 bg-primary text-on-primary font-semibold py-3 rounded-xl hover:opacity-90 transition-opacity">
+                New Focus
+            </button>
+<a class="flex items-center gap-3 px-4 py-2 text-stone-500 dark:text-stone-400 font-medium hover:bg-stone-200/50 transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-sm">Settings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 text-stone-500 dark:text-stone-400 font-medium hover:bg-stone-200/50 transition-colors" href="#">
+<span class="material-symbols-outlined">help_outline</span>
+<span class="text-sm">Support</span>
+</a>
+</div>
+</aside>
+<!-- Main Workspace Container -->
+<main class="ml-64 flex-1 flex flex-col min-h-screen">
+<!-- Shared TopNavBar -->
+<header class="fixed top-0 right-0 left-64 flex justify-between items-center px-8 h-16 z-40 bg-white/80 dark:bg-stone-950/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex items-center gap-6">
+<div class="relative group">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 text-stone-400 material-symbols-outlined">search</span>
+<input class="bg-surface-container-low border-none rounded-full py-1.5 pl-10 pr-4 text-sm w-64 focus:ring-1 focus:ring-primary transition-all" placeholder="Search Workspace..." type="text"/>
+</div>
+<nav class="hidden md:flex gap-8">
+<a class="text-[#004d5b] border-b-2 border-[#004d5b] pb-1 font-medium transition-all scale-95" href="#">Dashboard</a>
+<a class="text-stone-400 hover:text-[#006778] transition-all font-medium" href="#">Analytics</a>
+<a class="text-stone-400 hover:text-[#006778] transition-all font-medium" href="#">Insights</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-stone-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="text-stone-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">inbox</span>
+</button>
+<div class="h-8 w-8 rounded-full bg-stone-200 overflow-hidden ring-2 ring-primary/10">
+<img alt="User profile photo" class="object-cover w-full h-full" data-alt="Close up portrait of a professional woman with a calm expression against a soft studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY5IboG-yO05UJVHrnVU_hGeDc9iW7GkevRmKMC92BO9RybbXWBkGXQah6SBncvEa9xChtF4hOcvdmHdmYF37BB8A6qhV_mEGTl_xzZE8oa1XvUT6DgxfTpP0byIaR_PsKOsps4GzhBdRSjTIqCd1VJRAzvzCh-L9GxD79eTuNAIWbWzGodoxc0X-yu5AxJnW80ZSbZPnli4003BcEb1qgjttDwLgvpXK4z4hZ6--9lC_sCHOTh_HrbZ9TREn9HFw62Fr8_rH8Jg"/>
+</div>
+</div>
+</header>
+<!-- Content Canvas -->
+<div class="mt-16 p-8 flex gap-8">
+<!-- 20% Sidebar Summary -->
+<section class="w-1/5 shrink-0 space-y-6">
+<div class="bg-surface-container-low rounded-xl p-6">
+<h3 class="font-headline text-on-surface-variant text-sm font-bold uppercase tracking-wider mb-6">Today's Pulse</h3>
+<div class="space-y-8">
+<div>
+<div class="flex justify-between items-end mb-2">
+<span class="font-headline text-3xl font-bold text-primary">18</span>
+<span class="text-xs font-semibold text-stone-400 uppercase tracking-widest">Completed</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 72%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-end mb-2">
+<span class="font-headline text-3xl font-bold text-secondary">07</span>
+<span class="text-xs font-semibold text-stone-400 uppercase tracking-widest">Pending</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 28%"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-xl p-6 shadow-sm border border-outline-variant/10">
+<h3 class="font-headline text-on-surface-variant text-sm font-bold uppercase tracking-wider mb-4">SLA Health</h3>
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="text-sm font-medium flex-1">On Schedule</span>
+<span class="text-sm font-bold">12</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="text-sm font-medium flex-1">Due Soon</span>
+<span class="text-sm font-bold">4</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span class="text-sm font-medium flex-1">Overdue</span>
+<span class="text-sm font-bold">1</span>
+</div>
+</div>
+</div>
+<div class="rounded-xl overflow-hidden relative group h-48">
+<img alt="Inspiring workspace" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="High-end minimalist desk with a journal, a small plant, and soft morning sunlight filtering through a window" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCa72KhVCSRurdMnMkKVyIUNxipyW7MscK4XGsiswKMlobnDHP0sIbfK4_7f8NunNQWI56HVSzRP_YaG0qWuL6tCyX1bpSJbAAXHDMB6gfZwNxI3TJD_SPcaG0QyuqDwRA3ah-p0Duw5YMq9MObrfiSmDucBkavp3q-N7R1V-6dtuOavowlvL00oXMIRQUdvmNC5E4egv0PqCzOhn6onIvTDQKTFhn9l7AapiNKmpDuzKiTpH9Ha5Za1IVHsl7x03h8KwWM0VUow"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-4">
+<p class="text-white text-xs font-medium italic">"The beauty of balance is in the movement."</p>
+</div>
+</div>
+</section>
+<!-- 80% Main Content Bento Grid -->
+<section class="flex-1 space-y-8">
+<div class="flex justify-between items-baseline">
+<h2 class="font-headline text-display-lg text-primary font-extrabold tracking-tight">Daily Review</h2>
+<p class="text-stone-400 font-medium">Thursday, Oct 24</p>
+</div>
+<div class="grid grid-cols-12 gap-6">
+<!-- The Dualism Balance Chart -->
+<div class="col-span-7 bg-surface-container-low rounded-2xl p-8 relative overflow-hidden flex flex-col justify-between h-[400px]">
+<div class="relative z-10">
+<h3 class="font-headline text-headline-md text-primary font-bold mb-2">The Dualism Balance</h3>
+<p class="text-stone-500 body-md">A symmetrical view of your life lanes today.</p>
+</div>
+<div class="flex items-center justify-center gap-12 flex-1">
+<div class="relative w-48 h-48">
+<svg class="circular-chart" viewbox="0 0 36 36">
+<path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+<!-- 52% Personal -->
+<path class="circle circle-secondary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" stroke-dasharray="52, 100"></path>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="text-2xl font-headline font-extrabold text-secondary">52%</span>
+<span class="text-[10px] uppercase tracking-widest text-stone-400 font-bold">Personal</span>
+</div>
+</div>
+<div class="relative w-48 h-48">
+<svg class="circular-chart" viewbox="0 0 36 36">
+<path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+<!-- 48% Professional -->
+<path class="circle circle-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" stroke-dasharray="48, 100"></path>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="text-2xl font-headline font-extrabold text-primary">48%</span>
+<span class="text-[10px] uppercase tracking-widest text-stone-400 font-bold">Professional</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 relative z-10">
+<div class="bg-white/50 backdrop-blur p-4 rounded-xl">
+<span class="text-xs text-secondary font-bold uppercase tracking-tighter">Personal Peak</span>
+<p class="text-sm font-semibold mt-1">Evening Restoration Session</p>
+</div>
+<div class="bg-white/50 backdrop-blur p-4 rounded-xl">
+<span class="text-xs text-primary font-bold uppercase tracking-tighter">Pro Momentum</span>
+<p class="text-sm font-semibold mt-1">Strategic Q4 Planning</p>
+</div>
+</div>
+</div>
+<!-- Daily Throughput Bento Item -->
+<div class="col-span-5 bg-primary-container rounded-2xl p-8 text-on-primary-container flex flex-col h-[400px]">
+<h3 class="font-headline text-headline-md font-bold mb-4">Daily Throughput</h3>
+<div class="flex-1 flex flex-col justify-center space-y-6">
+<div class="flex items-center gap-6">
+<div class="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center text-3xl font-headline font-bold">8.4</div>
+<div>
+<p class="text-lg font-bold">Velocity Index</p>
+<p class="text-sm text-on-primary-container/70">Tasks per cognitive hour</p>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-bold uppercase">
+<span>Focus Density</span>
+<span>92%</span>
+</div>
+<div class="h-1 bg-white/10 rounded-full">
+<div class="h-full bg-inverse-primary rounded-full" style="width: 92%"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-bold uppercase">
+<span>Collaborative Load</span>
+<span>15%</span>
+</div>
+<div class="h-1 bg-white/10 rounded-full">
+<div class="h-full bg-inverse-primary rounded-full" style="width: 15%"></div>
+</div>
+</div>
+</div>
+<div class="pt-6 border-t border-white/10 mt-auto">
+<p class="text-sm italic opacity-80">You maintained 'Deep Focus' for 4.5 hours today.</p>
+</div>
+</div>
+<!-- Task Agility Section -->
+<div class="col-span-12 bg-white rounded-2xl p-8 shadow-sm border border-surface-container-high">
+<div class="flex justify-between items-center mb-8">
+<div>
+<h3 class="font-headline text-headline-md text-primary font-bold">Task Agility</h3>
+<p class="text-stone-500 text-sm">Dynamic lane switching across 5 key quadrants.</p>
+</div>
+<div class="bg-secondary-fixed text-on-secondary-fixed px-4 py-2 rounded-full font-bold text-xs">
+                                5 QUADRANT SHIFTS
+                            </div>
+</div>
+<div class="grid grid-cols-5 gap-4">
+<div class="p-6 bg-surface-container rounded-xl flex flex-col items-center text-center group hover:bg-primary hover:text-white transition-all duration-300">
+<span class="material-symbols-outlined text-3xl mb-4 text-primary group-hover:text-white transition-colors">rocket_launch</span>
+<h4 class="font-bold text-sm mb-1">Impact</h4>
+<p class="text-[10px] opacity-60">High Strategic Value</p>
+</div>
+<div class="p-6 bg-surface-container rounded-xl flex flex-col items-center text-center group hover:bg-secondary hover:text-white transition-all duration-300">
+<span class="material-symbols-outlined text-3xl mb-4 text-secondary group-hover:text-white transition-colors">eco</span>
+<h4 class="font-bold text-sm mb-1">Wellness</h4>
+<p class="text-[10px] opacity-60">Personal Health Check</p>
+</div>
+<div class="p-6 bg-surface-container rounded-xl flex flex-col items-center text-center group hover:bg-tertiary hover:text-white transition-all duration-300">
+<span class="material-symbols-outlined text-3xl mb-4 text-tertiary group-hover:text-white transition-colors">bolt</span>
+<h4 class="font-bold text-sm mb-1">Urgency</h4>
+<p class="text-[10px] opacity-60">Immediate Attention</p>
+</div>
+<div class="p-6 bg-surface-container rounded-xl flex flex-col items-center text-center group hover:bg-primary-container hover:text-white transition-all duration-300">
+<span class="material-symbols-outlined text-3xl mb-4 text-primary-container group-hover:text-white transition-colors">groups</span>
+<h4 class="font-bold text-sm mb-1">Synergy</h4>
+<p class="text-[10px] opacity-60">Team Collaboration</p>
+</div>
+<div class="p-6 bg-surface-container-high rounded-xl flex flex-col items-center text-center border-2 border-dashed border-outline-variant/30 group hover:border-primary transition-all duration-300">
+<span class="material-symbols-outlined text-3xl mb-4 text-stone-400 group-hover:text-primary transition-colors">add_circle</span>
+<h4 class="font-bold text-sm mb-1">New Flow</h4>
+<p class="text-[10px] opacity-60">Capture Insight</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Subtle Action Bar -->
+<div class="flex justify-center pt-8">
+<button class="bg-surface-container-low hover:bg-surface-container-high transition-colors text-primary font-bold px-10 py-4 rounded-full flex items-center gap-2">
+<span>Finalize Daily Sync</span>
+<span class="material-symbols-outlined">auto_awesome</span>
+</button>
+</div>
+</section>
+</div>
+</main>
+</body></html>

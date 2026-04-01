@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Synchronized Dualism - Weekly Review</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-fixed": "#c5ebd7",
+              "primary": "#004d5b",
+              "surface": "#f9f9f8",
+              "primary-container": "#006778",
+              "on-surface": "#1a1c1b",
+              "inverse-surface": "#2f3130",
+              "on-tertiary-fixed": "#360f00",
+              "surface-variant": "#e2e3e1",
+              "secondary": "#436555",
+              "inverse-primary": "#86d2e5",
+              "primary-fixed-dim": "#86d2e5",
+              "background": "#f9f9f8",
+              "tertiary": "#77310e",
+              "on-primary": "#ffffff",
+              "on-tertiary-container": "#ffcdb9",
+              "on-primary-container": "#97e3f6",
+              "surface-container-lowest": "#ffffff",
+              "error": "#ba1a1a",
+              "on-background": "#1a1c1b",
+              "primary-fixed": "#a9edff",
+              "on-tertiary": "#ffffff",
+              "on-surface-variant": "#3f484b",
+              "tertiary-fixed": "#ffdbcd",
+              "on-error": "#ffffff",
+              "outline": "#6f797c",
+              "on-primary-fixed-variant": "#004e5c",
+              "surface-container-low": "#f3f4f2",
+              "secondary-fixed-dim": "#a9cfbb",
+              "on-secondary-fixed": "#002115",
+              "outline-variant": "#bec8cb",
+              "on-tertiary-fixed-variant": "#77320e",
+              "surface-container-highest": "#e2e3e1",
+              "on-error-container": "#93000a",
+              "surface-container": "#edeeec",
+              "secondary-container": "#c2e8d4",
+              "surface-container-high": "#e8e8e7",
+              "tertiary-fixed-dim": "#ffb597",
+              "error-container": "#ffdad6",
+              "surface-bright": "#f9f9f8",
+              "surface-dim": "#d9dad9",
+              "on-secondary-fixed-variant": "#2c4d3e",
+              "surface-tint": "#026879",
+              "on-secondary-container": "#476a5a",
+              "on-primary-fixed": "#001f26",
+              "on-secondary": "#ffffff",
+              "inverse-on-surface": "#f0f1ef",
+              "tertiary-container": "#954823"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Work Sans"],
+              "label": ["Work Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        font-family: 'Work Sans', sans-serif;
+        background-color: #f9f9f8;
+      }
+      h1, h2, h3, h4 {
+        font-family: 'Manrope', sans-serif;
+      }
+    </style>
+</head>
+<body class="bg-surface text-on-surface overflow-x-hidden">
+<!-- SideNavBar Anchor -->
+<nav class="fixed left-0 top-0 h-full flex flex-col p-6 bg-[#f3f4f2] dark:bg-stone-900 w-64 z-50">
+<div class="mb-10">
+<h1 class="text-lg font-bold text-[#004d5b] dark:text-[#006778] tracking-tight">The Synchronized Dualism</h1>
+<p class="text-xs text-stone-500 font-medium mt-1">Curated Equilibrium</p>
+</div>
+<div class="flex flex-col space-y-4 flex-grow">
+<div class="flex items-center px-4 py-3 rounded-lg text-stone-500 dark:text-stone-400 font-medium hover:bg-stone-200/50 dark:hover:bg-stone-800/50 transition-colors group cursor-pointer">
+<span class="material-symbols-outlined mr-3" data-icon="calendar_today">calendar_today</span>
+<span class="font-body">Today</span>
+</div>
+<div class="flex items-center px-4 py-3 rounded-lg text-stone-500 dark:text-stone-400 font-medium hover:bg-stone-200/50 dark:hover:bg-stone-800/50 transition-colors group cursor-pointer">
+<span class="material-symbols-outlined mr-3" data-icon="target">target</span>
+<span class="font-body">Strategic Focus</span>
+</div>
+<div class="flex items-center px-4 py-3 rounded-lg text-stone-500 dark:text-stone-400 font-medium hover:bg-stone-200/50 dark:hover:bg-stone-800/50 transition-colors group cursor-pointer">
+<span class="material-symbols-outlined mr-3" data-icon="self_care">self_care</span>
+<span class="font-body">Restorative</span>
+</div>
+<div class="flex items-center px-4 py-3 rounded-lg text-stone-500 dark:text-stone-400 font-medium hover:bg-stone-200/50 dark:hover:bg-stone-800/50 transition-colors group cursor-pointer">
+<span class="material-symbols-outlined mr-3" data-icon="folder_open">folder_open</span>
+<span class="font-body">Projects</span>
+</div>
+<div class="flex items-center px-4 py-3 rounded-lg text-[#004d5b] dark:text-[#006778] font-bold border-r-4 border-[#004d5b] hover:bg-stone-200/50 dark:hover:bg-stone-800/50 transition-colors group cursor-pointer">
+<span class="material-symbols-outlined mr-3" data-icon="history">history</span>
+<span class="font-body">Archive</span>
+</div>
+</div>
+<button class="mb-8 w-full py-3 px-4 bg-primary text-on-primary rounded-full font-semibold flex items-center justify-center gap-2 hover:opacity-90 transition-all duration-200">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+            New Focus
+        </button>
+<div class="mt-auto pt-6 border-t border-stone-200/50 flex flex-col space-y-2">
+<div class="flex items-center px-4 py-2 text-stone-500 text-sm font-medium hover:text-primary cursor-pointer transition-colors">
+<span class="material-symbols-outlined mr-3" data-icon="settings">settings</span>
+                Settings
+            </div>
+<div class="flex items-center px-4 py-2 text-stone-500 text-sm font-medium hover:text-primary cursor-pointer transition-colors">
+<span class="material-symbols-outlined mr-3" data-icon="help_outline">help_outline</span>
+                Support
+            </div>
+</div>
+</nav>
+<!-- TopNavBar Anchor -->
+<header class="fixed top-0 right-0 left-64 flex justify-between items-center px-8 h-16 z-40 bg-white/80 dark:bg-stone-950/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex items-center gap-8">
+<div class="relative w-64">
+<span class="absolute inset-y-0 left-0 pl-3 flex items-center text-stone-400">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</span>
+<input class="block w-full pl-10 pr-3 py-2 border-none bg-surface-container-low rounded-lg text-sm focus:ring-0 focus:bg-surface-container-high transition-colors" placeholder="Search archive..." type="text"/>
+</div>
+<nav class="flex space-x-6">
+<a class="text-stone-400 dark:text-stone-500 font-medium body-md hover:text-[#006778] transition-all" href="#">Dashboard</a>
+<a class="text-stone-400 dark:text-stone-500 font-medium body-md hover:text-[#006778] transition-all" href="#">Analytics</a>
+<a class="text-[#004d5b] dark:text-[#006778] border-b-2 border-[#004d5b] pb-1 font-medium body-md" href="#">Insights</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-stone-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-stone-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="inbox">inbox</span>
+</button>
+<div class="ml-2 w-8 h-8 rounded-full overflow-hidden bg-stone-200">
+<img alt="Profile" data-alt="Close-up portrait of a professional male in a soft-lit modern studio with a clean grey background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5FBwwgc9SnecOrx58vp8FK_XZaSxn6936g2EXbRrxVh5SvrsN-6-aasQiMJZDzPuk1zUnBqksWbTaCtJXkJ5psik6sO7u2R2wDO4oLywqHLUiFE_K32QngeNB6Icg6VG5hW5TN6LUVPWeDor2JTIKqJeGU7zsduj-gFH5w0YJQf12NagfAaQMO9exADUeQ-1xr41hRT2k_kB2VAKPPMsr9fbM2vNPyn5ZzOY8QaXZgeLiSeWHkFDwc-kzUHnajdopDLhcf86maw"/>
+</div>
+</div>
+</header>
+<!-- Main Content Layout (20/80) -->
+<main class="ml-64 pt-16 min-h-screen flex">
+<!-- 20% Sidebar Stats Area -->
+<aside class="w-1/5 p-8 border-r-0 bg-surface-container-low flex flex-col gap-10">
+<div class="space-y-4">
+<h2 class="text-4xl font-bold font-headline text-primary tracking-tight leading-none">A Week of Intentional High-Focus</h2>
+<p class="text-on-surface-variant body-md leading-relaxed">Your professional and personal spheres are in a 64/36 synchronization. Continue this trajectory.</p>
+</div>
+<div class="space-y-8 mt-4">
+<div class="space-y-1">
+<span class="text-xs uppercase tracking-widest text-outline font-bold">Flow Sessions</span>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-bold font-headline">24</span>
+<span class="text-secondary font-semibold text-sm">+3 from last week</span>
+</div>
+</div>
+<div class="space-y-1">
+<span class="text-xs uppercase tracking-widest text-outline font-bold">Deep Work Total</span>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-bold font-headline">18.5h</span>
+<span class="text-tertiary font-semibold text-sm">Optimal reached</span>
+</div>
+</div>
+<div class="space-y-1">
+<span class="text-xs uppercase tracking-widest text-outline font-bold">Restoration score</span>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-bold font-headline">88%</span>
+<span class="text-stone-400 font-semibold text-sm">Target: 85%</span>
+</div>
+</div>
+</div>
+<div class="mt-auto">
+<div class="p-6 bg-surface-container-lowest rounded-xl shadow-sm border-0">
+<p class="text-sm font-semibold italic text-primary leading-snug">"Equilibrium is not a static state, but a constant adjustment."</p>
+<div class="mt-4 h-1 w-12 bg-tertiary"></div>
+</div>
+</div>
+</aside>
+<!-- 80% Content Canvas -->
+<section class="w-4/5 p-10 flex flex-col gap-10 bg-surface">
+<!-- Quadrant Balance Section (Bento Style) -->
+<div class="space-y-6">
+<div class="flex justify-between items-end">
+<h3 class="text-2xl font-bold font-headline">Quadrant Balance</h3>
+<p class="text-sm text-outline">Task distribution by Eisenhower priority</p>
+</div>
+<div class="grid grid-cols-4 gap-6 h-64">
+<!-- High Focus -->
+<div class="col-span-1 bg-primary text-on-primary p-6 rounded-2xl flex flex-col justify-between group hover:scale-[1.02] transition-transform">
+<div>
+<span class="text-xs uppercase tracking-widest opacity-70 font-bold">Urgent + Important</span>
+<h4 class="text-lg font-semibold mt-1">High Focus</h4>
+</div>
+<div class="text-5xl font-bold font-headline">18</div>
+</div>
+<!-- Strategic -->
+<div class="col-span-1 bg-primary-container text-on-primary-container p-6 rounded-2xl flex flex-col justify-between group hover:scale-[1.02] transition-transform">
+<div>
+<span class="text-xs uppercase tracking-widest opacity-70 font-bold">Schedule</span>
+<h4 class="text-lg font-semibold mt-1">Strategic Growth</h4>
+</div>
+<div class="text-5xl font-bold font-headline">12</div>
+</div>
+<!-- Operational -->
+<div class="col-span-1 bg-secondary-container text-on-secondary-container p-6 rounded-2xl flex flex-col justify-between group hover:scale-[1.02] transition-transform">
+<div>
+<span class="text-xs uppercase tracking-widest opacity-70 font-bold">Delegate</span>
+<h4 class="text-lg font-semibold mt-1">Operational</h4>
+</div>
+<div class="text-5xl font-bold font-headline">7</div>
+</div>
+<!-- Maintenance -->
+<div class="col-span-1 bg-surface-container-highest text-on-surface-variant p-6 rounded-2xl flex flex-col justify-between group hover:scale-[1.02] transition-transform">
+<div>
+<span class="text-xs uppercase tracking-widest opacity-70 font-bold">Eliminate</span>
+<h4 class="text-lg font-semibold mt-1">Maintenance</h4>
+</div>
+<div class="text-5xl font-bold font-headline">5</div>
+</div>
+</div>
+</div>
+<!-- Distribution Row -->
+<div class="grid grid-cols-2 gap-10">
+<!-- SLA Health -->
+<div class="bg-surface-container-low p-8 rounded-2xl space-y-8">
+<div class="flex justify-between items-center">
+<h3 class="text-xl font-bold font-headline">SLA Health</h3>
+<span class="material-symbols-outlined text-outline" data-icon="insights">insights</span>
+</div>
+<div class="flex items-end gap-6 h-32">
+<div class="flex-1 flex flex-col items-center gap-3">
+<div class="w-full bg-secondary rounded-lg" style="height: 100%"></div>
+<span class="text-xl font-bold">28</span>
+<span class="text-[10px] uppercase font-bold tracking-tighter text-outline">On Track</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-3">
+<div class="w-full bg-tertiary-fixed-dim rounded-lg" style="height: 32%"></div>
+<span class="text-xl font-bold">9</span>
+<span class="text-[10px] uppercase font-bold tracking-tighter text-outline">Warning</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-3">
+<div class="w-full bg-error rounded-lg" style="height: 18%"></div>
+<span class="text-xl font-bold">5</span>
+<span class="text-[10px] uppercase font-bold tracking-tighter text-outline">At Risk</span>
+</div>
+</div>
+</div>
+<!-- Lane Distribution -->
+<div class="bg-surface-container-low p-8 rounded-2xl space-y-8">
+<div class="flex justify-between items-center">
+<h3 class="text-xl font-bold font-headline">Lane Distribution</h3>
+<span class="material-symbols-outlined text-outline" data-icon="balance">balance</span>
+</div>
+<div class="space-y-6">
+<div class="relative h-12 w-full bg-surface-container-highest rounded-full overflow-hidden flex">
+<div class="h-full bg-primary flex items-center justify-center text-[10px] font-bold text-on-primary px-4 transition-all" style="width: 64%">PROFESSIONAL 64%</div>
+<div class="h-full bg-secondary flex items-center justify-center text-[10px] font-bold text-on-secondary px-4 transition-all" style="width: 36%">PERSONAL 36%</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex items-center gap-3">
+<div class="w-3 h-3 rounded-full bg-primary"></div>
+<span class="text-sm body-md font-medium">Deep Focus Work</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-3 h-3 rounded-full bg-secondary"></div>
+<span class="text-sm body-md font-medium">Restorative Habits</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- CTA Section -->
+<div class="relative mt-auto overflow-hidden rounded-3xl p-10 bg-inverse-surface group">
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-10 bg-no-repeat bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Modern minimalist office space with warm wooden accents and a large window looking out to a serene city skyline at dusk" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBwY41G7s96zqMOHd8oyQ5lrND6mc9C6UdjyiALaGtHSjxztkSNcvTyq2eHyVUli6srqb9gv8NC4lflGAJ50gMVgcf5lRKYq8inoSacWJzhFvrtzYA6NKRSoOHLoMZyV-7AviZuLGm5Zb5_99WjCf09G9zrGvIlGQ8wnOQapc_zujh_2WnidWPZVJf5PQAwNe4BXnQJCsTmVafuHenTousV_H6NnHDxop50ySMLM4UwdQIYkyGQ_0sje5dLibkRZg0ry--4OK4moA')"></div>
+<div class="relative z-10 max-w-lg space-y-6">
+<h3 class="text-3xl font-bold font-headline text-on-primary">Plan for Equilibrium</h3>
+<p class="text-surface-variant body-lg leading-relaxed">Your data suggests a slight tilt toward operational tasks. Prepare next week’s focus to reclaim strategic growth time.</p>
+<div class="flex gap-4 pt-4">
+<button class="bg-primary-fixed text-on-primary-fixed px-8 py-3 rounded-full font-bold flex items-center gap-2 hover:bg-inverse-primary transition-colors">
+                            Initialize Weekly Plan
+                            <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<button class="bg-transparent text-white border border-outline-variant/30 px-8 py-3 rounded-full font-bold hover:bg-white/10 transition-colors">
+                            Archive Review
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+</body></html>

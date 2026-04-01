@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Equilibrium | Home Matrix Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Work_Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface": "#f9f9f8",
+                        "primary-fixed": "#a9edff",
+                        "surface-dim": "#d9dad9",
+                        "secondary-container": "#c2e8d4",
+                        "surface-container-highest": "#e2e3e1",
+                        "on-primary-container": "#97e3f6",
+                        "surface-tint": "#026879",
+                        "surface-container-high": "#e8e8e7",
+                        "on-secondary-container": "#476a5a",
+                        "surface-bright": "#f9f9f8",
+                        "tertiary": "#77310e",
+                        "outline": "#6f797c",
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#f3f4f2",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed": "#c5ebd7",
+                        "on-secondary-fixed-variant": "#2c4d3e",
+                        "on-tertiary-container": "#ffcdb9",
+                        "on-secondary-fixed": "#002115",
+                        "surface-container": "#edeeec",
+                        "background": "#f9f9f8",
+                        "tertiary-fixed-dim": "#ffb597",
+                        "error": "#ba1a1a",
+                        "primary-fixed-dim": "#86d2e5",
+                        "inverse-surface": "#2f3130",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#004e5c",
+                        "primary": "#004d5b",
+                        "tertiary-fixed": "#ffdbcd",
+                        "on-background": "#1a1c1b",
+                        "inverse-on-surface": "#f0f1ef",
+                        "secondary-fixed-dim": "#a9cfbb",
+                        "on-surface": "#1a1c1b",
+                        "outline-variant": "#bec8cb",
+                        "on-primary": "#ffffff",
+                        "surface-variant": "#e2e3e1",
+                        "tertiary-container": "#954823",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary": "#436555",
+                        "inverse-primary": "#86d2e5",
+                        "on-tertiary-fixed": "#360f00",
+                        "primary-container": "#006778",
+                        "on-surface-variant": "#3f484b",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#77320e",
+                        "on-primary-fixed": "#001f26"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Work Sans"],
+                        "label": ["Work Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .matrix-axis-label {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface overflow-hidden h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="flex justify-between items-center w-full px-6 bg-surface h-16 z-50">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-bold tracking-tight text-[#004d5b]">Equilibrium</span>
+<nav class="hidden md:flex gap-6 items-center">
+<a class="font-label body-lg text-[#004d5b] border-b-2 border-[#004d5b] pb-1 hover:text-[#006778] transition-colors" href="#">Dashboard</a>
+<a class="font-label body-lg text-stone-500 hover:text-[#006778] transition-colors" href="#">Professional Lane</a>
+<a class="font-label body-lg text-stone-500 hover:text-[#006778] transition-colors" href="#">Personal Lane</a>
+<a class="font-label body-lg text-stone-500 hover:text-[#006778] transition-colors" href="#">Archives</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative flex items-center bg-surface-container-low rounded-full px-4 py-1.5 focus-within:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-stone-500 mr-2" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm font-label p-0 w-48" placeholder="Search focus..." type="text"/>
+</div>
+<button class="text-stone-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="text-stone-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<div class="h-8 w-8 rounded-full overflow-hidden border border-outline-variant/30 ml-2">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="Close up portrait of a professional man with short hair and a warm smile, neutral grey background, studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnn2zRdvmGbNZnKM0WgobbA3t27GY8ZcUgwagEvWjozdB1n75uEzfsV4V0sf9utJGfTh8uJvyMQg0XnBp-99SSYOCYrxaQW9LtyJpFU3yAPAvOaUfVy-7bWxFSVrIiy3wiqLvwYFDSIe9kgNooj8bdjSeqYK61P413RemQMGND-Kht7ojDbZZ6d1PyGDy3wOTGE_RbfVweTg1Eq5LiY_nl1Ut9XInC8huW3OQMKc43lwXIKUrbUr_OpIaAo9ovUCbSpu5v94nEFg"/>
+</div>
+</div>
+</header>
+<main class="flex flex-1 overflow-hidden">
+<!-- Left Sidebar: Unassigned / New Tasks -->
+<aside class="w-1/5 bg-surface-container-low border-r border-stone-200/50 flex flex-col p-6 overflow-y-auto">
+<div class="mb-8">
+<h2 class="font-headline headline-md text-primary font-bold mb-2">Inbox</h2>
+<p class="font-label text-sm text-stone-500">Unassigned / New Tasks</p>
+</div>
+<div class="space-y-6">
+<!-- Task Card: Draggable Professional -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm border border-transparent hover:border-primary-fixed transition-all cursor-grab active:cursor-grabbing group relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<div class="flex justify-between items-start mb-2">
+<span class="text-[10px] font-bold tracking-widest text-primary uppercase font-label">Professional</span>
+<div class="h-2 w-2 rounded-full bg-error" title="High SLA Priority"></div>
+</div>
+<h3 class="font-headline font-semibold text-on-surface mb-1 leading-snug">Quarterly Financial Review</h3>
+<div class="flex items-center gap-2 text-stone-400 mt-3">
+<span class="material-symbols-outlined text-xs" data-icon="drag_indicator">drag_indicator</span>
+<span class="text-xs font-label">Drag to prioritize</span>
+</div>
+</div>
+<!-- Task Card: Draggable Personal -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm border border-transparent hover:border-secondary transition-all cursor-grab active:cursor-grabbing group relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-secondary"></div>
+<div class="flex justify-between items-start mb-2">
+<span class="text-[10px] font-bold tracking-widest text-secondary uppercase font-label">Personal</span>
+<div class="h-2 w-2 rounded-full bg-warning-container text-yellow-500" style="background: #fbbf24;" title="Medium SLA Priority"></div>
+</div>
+<h3 class="font-headline font-semibold text-on-surface mb-1 leading-snug">Weekend Garden Layout</h3>
+<div class="flex items-center gap-2 text-stone-400 mt-3">
+<span class="material-symbols-outlined text-xs" data-icon="drag_indicator">drag_indicator</span>
+<span class="text-xs font-label">Drag to prioritize</span>
+</div>
+</div>
+<!-- Task Card: Being "Lifted" Visual Hack -->
+<div class="bg-surface-container-lowest/40 border border-dashed border-stone-300 p-4 rounded-xl h-24 flex items-center justify-center">
+<span class="text-xs font-label text-stone-400">Task being moved...</span>
+</div>
+<!-- Another Task -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm border border-transparent hover:border-primary-fixed transition-all cursor-grab active:cursor-grabbing group relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<div class="flex justify-between items-start mb-2">
+<span class="text-[10px] font-bold tracking-widest text-primary uppercase font-label">Professional</span>
+<div class="h-2 w-2 rounded-full bg-success-container text-emerald-500" style="background: #10b981;" title="Low SLA Priority"></div>
+</div>
+<h3 class="font-headline font-semibold text-on-surface mb-1 leading-snug">Update Design Tokens</h3>
+<div class="flex items-center gap-2 text-stone-400 mt-3">
+<span class="material-symbols-outlined text-xs" data-icon="drag_indicator">drag_indicator</span>
+<span class="text-xs font-label">Drag to prioritize</span>
+</div>
+</div>
+</div>
+<button class="mt-8 flex items-center justify-center gap-2 py-3 w-full bg-primary text-on-primary rounded-xl font-semibold font-headline transition-transform active:scale-95 shadow-sm">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+                New Task
+            </button>
+</aside>
+<!-- Main Content: Eisenhower Matrix -->
+<section class="w-4/5 p-8 flex flex-col relative">
+<!-- Matrix Header & Axis Labels -->
+<div class="flex justify-between items-center mb-8">
+<h1 class="font-headline text-3xl font-extrabold text-primary">Priority Matrix</h1>
+<div class="flex gap-4">
+<div class="flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-sm">
+<div class="h-2 w-2 rounded-full bg-primary"></div>
+<span class="text-xs font-label font-bold text-primary">Professional</span>
+</div>
+<div class="flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-sm">
+<div class="h-2 w-2 rounded-full bg-secondary"></div>
+<span class="text-xs font-label font-bold text-secondary">Personal</span>
+</div>
+</div>
+</div>
+<!-- The Grid Wrapper -->
+<div class="flex-1 relative grid grid-cols-2 grid-rows-2 gap-6 pb-8 pl-8">
+<!-- Axis Labels -->
+<div class="absolute -left-2 top-1/2 -translate-y-1/2 matrix-axis-label font-label text-xs font-bold tracking-[0.2em] text-stone-400 uppercase">Importance</div>
+<div class="absolute bottom-0 left-1/2 -translate-x-1/2 font-label text-xs font-bold tracking-[0.2em] text-stone-400 uppercase">Urgency</div>
+<!-- Quadrant 1: Urgent & Important -->
+<div class="bg-surface-container-low rounded-2xl p-6 flex flex-col border border-stone-200/30">
+<div class="flex items-baseline gap-3 mb-4">
+<h2 class="font-headline headline-md font-bold text-primary">Do it now!</h2>
+<span class="text-xs font-label text-stone-500">Immediate action required</span>
+</div>
+<div class="flex-1 space-y-4">
+<!-- Placed Task Card -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm border-l-4 border-primary">
+<div class="flex justify-between items-start mb-1">
+<h4 class="font-headline font-bold text-sm">Server Migration Sync</h4>
+<span class="material-symbols-outlined text-stone-300 text-sm" data-icon="more_vert">more_vert</span>
+</div>
+<p class="text-xs text-stone-500 line-clamp-1">Coordinate with DevOps for 3PM deploy.</p>
+</div>
+<!-- Dragged "Ghost" State -->
+<div class="bg-primary/5 border-2 border-dashed border-primary/20 rounded-xl p-4 flex items-center justify-center">
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-xl border-l-4 border-secondary rotate-2 scale-105 pointer-events-none opacity-90 w-full">
+<div class="flex justify-between items-start mb-1">
+<h4 class="font-headline font-bold text-sm">Grocery Shopping</h4>
+<span class="h-2 w-2 rounded-full bg-error"></span>
+</div>
+<p class="text-xs text-stone-500">Needs to happen before 6PM</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Quadrant 2: Not Urgent but Important -->
+<div class="bg-surface-container-low rounded-2xl p-6 flex flex-col border border-stone-200/30">
+<div class="flex items-baseline gap-3 mb-4">
+<h2 class="font-headline headline-md font-bold text-primary">Schedule it</h2>
+<span class="text-xs font-label text-stone-500">Strategic growth &amp; planning</span>
+</div>
+<div class="flex-1 space-y-4">
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm border-l-4 border-primary">
+<h4 class="font-headline font-bold text-sm mb-1">Annual Goal Setting</h4>
+<p class="text-xs text-stone-500 line-clamp-1">Drafting long-term vision for Q4.</p>
+</div>
+</div>
+</div>
+<!-- Quadrant 3: Urgent but Not Important -->
+<div class="bg-surface-container-low rounded-2xl p-6 flex flex-col border border-stone-200/30">
+<div class="flex items-baseline gap-3 mb-4">
+<h2 class="font-headline headline-md font-bold text-primary">Delegate it</h2>
+<span class="text-xs font-label text-stone-500">Minimize or assign</span>
+</div>
+<div class="flex-1 space-y-4">
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm border-l-4 border-secondary/50">
+<h4 class="font-headline font-bold text-sm mb-1">Dry Cleaning Pickup</h4>
+<p class="text-xs text-stone-500 line-clamp-1">Ask the concierge or partner.</p>
+</div>
+</div>
+</div>
+<!-- Quadrant 4: Not Urgent & Not Important -->
+<div class="bg-surface-container-low rounded-2xl p-6 flex flex-col border border-stone-200/30">
+<div class="flex items-baseline gap-3 mb-4">
+<h2 class="font-headline headline-md font-bold text-primary">Eliminate it</h2>
+<span class="text-xs font-label text-stone-500">Low value activities</span>
+</div>
+<div class="flex-1 flex flex-col items-center justify-center opacity-40">
+<span class="material-symbols-outlined text-4xl mb-2 text-stone-300" data-icon="delete_sweep">delete_sweep</span>
+<p class="font-label text-xs text-stone-400">Drag items here to archive</p>
+</div>
+</div>
+</div>
+<!-- Axis lines -->
+<div class="absolute top-1/2 left-8 right-8 h-px bg-stone-300/50 pointer-events-none"></div>
+<div class="absolute left-1/2 top-[120px] bottom-8 w-px bg-stone-300/50 pointer-events-none"></div>
+<!-- Contextual Floating Action Button -->
+<button class="fixed bottom-10 right-10 flex items-center gap-3 px-6 py-4 bg-tertiary text-on-tertiary rounded-full shadow-2xl transition-all hover:translate-y-[-2px] active:scale-95 group">
+<span class="material-symbols-outlined" data-icon="bolt">bolt</span>
+<span class="font-headline font-bold tracking-tight">AI Balance Check</span>
+<div class="absolute -top-1 -right-1 flex h-4 w-4">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary-fixed opacity-75"></span>
+<span class="relative inline-flex rounded-full h-4 w-4 bg-tertiary"></span>
+</div>
+</button>
+</section>
+</main>
+<!-- Visual Polish: Subtle Background Ornamentation -->
+<div class="fixed top-0 right-0 w-1/2 h-full -z-10 pointer-events-none">
+<div class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] -mr-40 -mt-40"></div>
+<div class="absolute bottom-0 right-0 w-[300px] h-[300px] bg-secondary/5 rounded-full blur-[80px] -mb-20 -mr-20"></div>
+</div>
+</body></html>
