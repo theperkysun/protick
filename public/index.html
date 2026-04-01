@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Protick • The Synchronized Dualism</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div>
+          <h1>The Synchronized Dualism</h1>
+          <p>Curated Equilibrium</p>
+        </div>
+        <div class="lane-switcher">
+          <button class="lane active" data-lane="all">All</button>
+          <button class="lane" data-lane="professional">Professional</button>
+          <button class="lane" data-lane="personal">Personal</button>
+        </div>
+
+        <button class="primary" id="newTaskBtn">New Focus</button>
+      </aside>
+
+      <main>
+        <header>
+          <div>
+            <h2>Today’s Intentional Flow</h2>
+            <p>Editorial clarity with professional and personal lanes in one workspace.</p>
+          </div>
+          <form id="taskForm" class="task-form">
+            <input id="title" required placeholder="Add a task title" />
+            <select id="lane">
+              <option value="professional">Professional</option>
+              <option value="personal">Personal</option>
+            </select>
+            <button type="submit">Add</button>
+          </form>
+        </header>
+
+        <section class="kpis">
+          <article><h3 id="total">0</h3><p>Total tasks</p></article>
+          <article><h3 id="pending">0</h3><p>Pending</p></article>
+          <article><h3 id="professional">0</h3><p>Professional</p></article>
+          <article><h3 id="personal">0</h3><p>Personal</p></article>
+        </section>
+
+        <section>
+          <h4>Active Tasks</h4>
+          <div id="tasks" class="tasks"></div>
+        </section>
+      </main>
+    </div>
+
+    <template id="taskTemplate">
+      <article class="task-card">
+        <div>
+          <span class="pill"></span>
+          <h5></h5>
+          <p></p>
+        </div>
+        <div class="actions">
+          <button class="done">Done</button>
+          <button class="remove">Delete</button>
+        </div>
+      </article>
+    </template>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
